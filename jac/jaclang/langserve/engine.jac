@@ -292,6 +292,7 @@ class JacLangServer(JacProgram , LanguageServer) {
             self.log_py(f"'Error during completion: '{e}");
             return lspt.CompletionList(is_incomplete=False, items=[]);
         }
+
         self.debug("returning empty list");
     }
 
@@ -490,9 +491,9 @@ class JacLangServer(JacProgram , LanguageServer) {
         }
         node_type = node_selected.type;
         ####################################################################
-         ##          Handle go to def for types and variables               ##
-         ####################################################################
-         if node_type {
+        ##          Handle go to def for types and variables              ##
+        ####################################################################
+        if node_type {
             if isinstance(node_type, ModuleType) {
                 return make_location(node_selected, is_module=True);
             } elif isinstance(node_type, ClassType) {
