@@ -96,19 +96,19 @@ node Person { has name: str; }
 edge Friend {
     has since: int;
     has strength: int = 5;
-    
-    def is_strong -> bool { 
-        return self.strength >= 7; 
+
+    def is_strong -> bool {
+        return self.strength >= 7;
     }
 }
 
 with entry {
     alice +>:Friend(since=2015, strength=9):+> bob;
-    
+
     # Query all Friend relationships from alice
     friends = [alice ->:Friend:->];
     print(f"Alice has {len(friends)} friend(s)");
-    
+
     # The result is a list of Person nodes, not data structures you have to unpack
 }
 ```
@@ -121,13 +121,13 @@ Use bracket syntax to query the graph without loops:
 
 ```jac
 # All outgoing connections (any type)
-all_out = [alice -->];                    
+all_out = [alice -->];
 
-# Only Friend edges 
-type_out = [alice ->:Friend:->];          
+# Only Friend edges
+type_out = [alice ->:Friend:->];
 
 # Friend edges filtered by property
-filtered = [alice ->:Friend:since < 2018:->];  
+filtered = [alice ->:Friend:since < 2018:->];
 
 # Each query returns a list of connected nodes, ready to use
 ```
@@ -150,15 +150,15 @@ Think of `[alice ->:Friend:->]` as a declarative path specification: "From alice
 Nodes and edges support all OOP features—inheritance, polymorphism, interfaces:
 
 ```jac
-node Entity { 
-    has id: str; 
-    has created: str; 
+node Entity {
+    has id: str;
+    has created: str;
 }
 
 node Person(Entity) {
     has email: str;
-    def notify(msg: str) { 
-        print(f"To {self.email}: {msg}"); 
+    def notify(msg: str) {
+        print(f"To {self.email}: {msg}");
     }
 }
 
@@ -193,7 +193,7 @@ walker Greeter {
 with entry {
     alice = Person(name="Alice");
     bob = Person(name="Bob");
-    
+
     root ++> alice ++> bob;
     root spawn Greeter();  # Launch walker, it navigates autonomously
 }
@@ -237,10 +237,10 @@ walker Explorer {
     can explore with Person entry {
         # Visit all outgoing connections (depth-first)
         visit [-->];
-        
+
         # Visit only Friend edges
         visit [->:Friend:->];
-        
+
         # Friend edges with strength > 5
         visit [->:Friend:strength > 5:->];
     }
@@ -284,7 +284,7 @@ walker Tourist {
         print(f"Met {here.name}, age {here.age}");
         visit [-->];
     }
-    
+
     can visit_city with City entry {
         print(f"Visiting {here.name}, pop {here.population}");
         visit [-->];
@@ -301,7 +301,7 @@ Nodes can also define abilities triggered by specific walker types:
 ```jac
 node Person {
     has name: str;
-    
+
     can receive_greeting with Greeter entry {
         print(f"{self.name} acknowledges greeting");
     }
@@ -346,14 +346,14 @@ In traditional OOP, you'd need the Visitor Pattern with its awkward `accept(Visi
 # Visit immediate neighbors
 visit [-->];
 
-# Visit only via Friend edges  
+# Visit only via Friend edges
 visit [->:Friend:->];
 
 # Visit via Friend edges from before 2020
 visit [->:Friend:since < 2020:->];
 
 # Multi-hop: friends of friends
-visit [here ->:Friend:-> ->:Friend:->];  
+visit [here ->:Friend:-> ->:Friend:->];
 ```
 
 Each pattern specifies a path expression: "from current node, follow these edges, then from those nodes, follow these edges." The runtime materializes all matching paths.
@@ -365,7 +365,7 @@ Unlike functions that `return` once, walkers use `report` to stream multiple val
 ```jac
 walker AgeCollector {
     has ages: list = [];
-    
+
     can collect with Person entry {
         self.ages.append(here.age);  # Accumulate in walker state
         visit [-->];
@@ -408,17 +408,17 @@ walker TaskAnalyzer {
 
     can analyze with Task entry {
         if here.status != "pending": return;
-        
+
         # Get all dependencies
         deps = [here ->:DependsOn:->];
-        
+
         # Check if all complete
         all_done = all(dep.status == "complete" for dep in deps);
-        
+
         if all_done {
             self.ready_tasks.append(here.title);
         }
-        
+
         visit [-->];  # Continue to next task
     }
 }
@@ -440,7 +440,7 @@ This walker traverses the entire task graph, identifies completed dependencies, 
 ---
 
 ## Next Steps
-Jac contains many more features! 
+Jac contains many more features!
 
 **Want to start building?** We have a [Syntax Quick Reference](./quick_reference.md) to make it easier to write jac.
 
