@@ -1,6 +1,9 @@
 # Jac Quickstart
 
-This document will give you a quick start on Jac syntax and Object-Spatial Programming(OSP). If you wish to use byLLM, you can use it either natively in Jac or as a Python library. To use byLLM in Python, refer to its [documentation](./jac-byllm/python_integration.md).
+This document will give you a quick start on Object-Spatial Programming(OSP), the core feature of Jac.
+For a short overview of the language syntax, refer to the [Syntax Quick Reference](./quick_reference.md). 
+If using byLLM in Python, refer to its [documentation](./jac-byllm/python_integration.md).
+
 
 ## Python Superset
 Jac is a drop-in replacement for Python and supersets Python, much like Typescript supersets Javascript or C++ supersets C. It extends Python's semantics while maintaining full interoperability with the Python ecosystem.
