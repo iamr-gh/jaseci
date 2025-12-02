@@ -153,6 +153,7 @@ graph LR
 **Example Project:** The following examples demonstrate a task manager application that stores tasks and generates AI-powered task descriptions.
 
 **Core Features:**
+
 * Task storage with graph-based relationships
 * Task validation (title length check)
 * AI-generated task descriptions
