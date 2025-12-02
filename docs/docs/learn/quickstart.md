@@ -1,7 +1,7 @@
 # Jac Quickstart
 
 This document will give you a quick start on Object-Spatial Programming(OSP), the core feature of Jac.
-For a short overview of the language syntax, refer to the [Syntax Quick Reference](./quick_reference.md). 
+For a short overview of the language syntax, refer to the [Syntax Quick Reference](./quick_reference.md).
 If using byLLM in Python, refer to its [documentation](./jac-byllm/python_integration.md).
 
 
