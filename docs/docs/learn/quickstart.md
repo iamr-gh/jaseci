@@ -1,6 +1,7 @@
 # Jac Quickstart
 
 ## Python Superset
+
 Jac is a drop-in replacement for Python and supersets Python, much like Typescript supersets Javascript or C++ supersets C. It extends Python's semantics while maintaining full interoperability with the Python ecosystem.
 Anything you can build with Python, you can build in Jac, and often more efficiently.
 
@@ -26,6 +27,7 @@ with entry {
 
 <!-- distilled from jason's blog: https://www.mars.ninja/blog/2025/10/26/four-things-object-spatial-programming/, using Kimi-K2 thinking -->
 ## Graphs and OSP
+
 One of the core features of Jac is its ability to represent graphs natively in the type system. This enables Object-Spatial Programming (OSP), a paradigm where computation moves through spatially connected objects rather than calling methods on isolated ones.
 
 ### Why This Matters for OOP Programmers
@@ -330,6 +332,7 @@ walker Visitor {
 ```
 
 Execution order: **node ability first**, then walker ability. This bidirectional interaction contract means you can:
+
 - Nodes validate/prepare state before walker acts
 - Walkers implement generic algorithms that any node can customize
 - Achieve double-dispatch polymorphism without visitor pattern boilerplate
@@ -440,6 +443,7 @@ This walker traverses the entire task graph, identifies completed dependencies, 
 ---
 
 ## Next Steps
+
 Jac contains many more features!
 
 **Want to start building?** We have a [Syntax Quick Reference](./quick_reference.md) to make it easier to write jac.

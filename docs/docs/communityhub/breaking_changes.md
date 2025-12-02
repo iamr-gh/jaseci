@@ -12,7 +12,6 @@ MTLLM library is now deprecated and replaced by the byLLM package. In all place 
 
 All byLLM exports have been moved under the `byllm.lib` module to enable lazy loading and faster startup. Direct imports from `byllm` are removed.
 
-
 **Before**
 
 ```jac
@@ -88,6 +87,7 @@ test test_function_result {
 ```
 
 **Key Changes:**
+
 - Replace all `check` statements with `assert` statements in test blocks
 - `assert` statements in test blocks report test failures without raising exceptions
 - `assert` statements outside test blocks continue to raise `AssertionError` as before
@@ -268,6 +268,7 @@ with entry {
 The new `impl` keyword provides a simpler and more explicit way to implement abilities and methods for objects, nodes, edges, and other types. This replaces the previous more complex colon-based syntax for implementation.
 
 **Before (v0.7.x):**
+
 ```jac
 :obj:Circle:def:area -> float {
     return math.pi * self.radius * self.radius;
@@ -283,6 +284,7 @@ The new `impl` keyword provides a simpler and more explicit way to implement abi
 ```
 
 **After (v0.8.0+):**
+
 ```jac
 impl Circle.area -> float {
     return math.pi * self.radius * self.radius;
@@ -304,6 +306,7 @@ This change makes the implementation syntax more readable, eliminates ambiguity,
 The syntax for specifying inheritance has been updated from using colons to using parentheses, which better aligns with common object-oriented programming languages.
 
 **Before (v0.7.x):**
+
 ```jac
 obj Vehicle {
     has wheels: int;
@@ -323,6 +326,7 @@ node AdminUser :BaseUser: {
 ```
 
 **After (v0.8.0+):**
+
 ```jac
 obj Vehicle {
     has wheels: int;
@@ -348,6 +352,7 @@ This change makes the inheritance syntax more intuitive and consistent with lang
 Instead of using `can` keyword for all functions and abilities, `can` statements are only used for object-spatial abilities and `def` keyword must be used for traditional python like functions and methods.
 
 **Before (v0.7.x and earlier):**
+
 ```jac
 can add(x: int, y: int) -> int {
     return x + y;
@@ -372,6 +377,7 @@ node Person {
 ```
 
 **After (v0.8.0+):**
+
 ```jac
 def add(x: int, y: int) -> int {
     return x + y;
@@ -400,6 +406,7 @@ node Person {
 Instead of using `here` keyword to represent the other object context while `self` is the self referencial context. Now `here` can only be used in walker abilities to reference a node or edge, and `visitor` must be used in nodes/edges to reference the walker context.
 
 **Before (v0.7.x and earlier):**
+
 ```jac
 node Person {
     has name;
@@ -425,6 +432,7 @@ walker PersonVisitor {
 ```
 
 **After (v0.8.0+):**
+
 ```jac
 node Person {
     has name;
@@ -450,6 +458,7 @@ walker PersonVisitor {
 ```
 
 This change makes the code more intuitive by clearly distinguishing between:
+
 - `self`: The current object (node or edge) referring to itself
 - `visitor`: The walker interacting with a node/edge
 - `here`: Used only in walker abilities to reference the current node/edge being visited
@@ -459,6 +468,7 @@ This change makes the code more intuitive by clearly distinguishing between:
 Instead of using the `with x: int can x;` type syntax the updated lambda syntax now replaces `with` and `can` with `lambda` and `:` repsectively.
 
 **Before (v0.7.x):**
+
 ```jac
 # Lambda function syntax with 'with' and 'can'
 with entry {
@@ -467,6 +477,7 @@ with entry {
 ```
 
 **After (v0.8.0+):**
+
 ```jac
 # Updated lambda
 with entry {
@@ -481,12 +492,14 @@ This change brings Jac's lambda syntax closer to Python's familiar `lambda param
 The syntax for typed arrow notations are updated as `-:MyEdge:->` and `+:MyEdge:+>` is now `->:MyEdge:->` and `+>:MyEdge:+> for reference and creations.
 
 **Before (v0.7.x):**
+
 ```jac
 friends = [-:Friendship:->];
 alice <+:Friendship:strength=0.9:+ bob;
 ```
 
 **After (v0.8.0+):**
+
 ```jac
 friends = [->:Friendship:->];
 alice <+:Friendship:strength=0.9:<+ bob;
@@ -499,12 +512,14 @@ This change was made to eliminate syntax conflicts with Python-style list slicin
 The syntax for importing specific modules or components from a package has been updated to use curly braces for better readability and to align with modern language conventions.
 
 **Before (v0.7.x):**
+
 ```jac
 import from pygame_mock, color, display;
 import from utils, helper, math_utils, string_formatter;
 ```
 
 **After (v0.8.0+):**
+
 ```jac
 import from pygame_mock { color, display };
 import from utils { helper, math_utils, string_formatter };
@@ -517,6 +532,7 @@ This new syntax using curly braces makes it clearer which modules are being impo
 The language-specific import syntax has been simplified by removing the explicit language annotations (`:py` and `:jac`). The compiler now automatically resolves imports based on context and file extensions.
 
 **Before (v0.7.x):**
+
 ```jac
 import:py requests;
 import:jac graph_utils;
@@ -524,6 +540,7 @@ import:py json, os, sys;
 ```
 
 **After (v0.8.0+):**
+
 ```jac
 import requests;
 import graph_utils;
@@ -537,6 +554,7 @@ This change simplifies the import syntax, making code cleaner while still mainta
 The permission management API has been renamed to better reflect its purpose and functionality.
 
 **Before (v0.7.x):**
+
 ```jac
 walker create_item {
     can create with `root entry {
@@ -548,6 +566,7 @@ walker create_item {
 ```
 
 **After (v0.8.0+):**
+
 ```jac
 walker create_item {
     can create with `root entry {

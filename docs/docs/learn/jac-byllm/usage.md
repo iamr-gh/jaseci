@@ -40,7 +40,7 @@ byLLM uses [LiteLLM](https://docs.litellm.ai/docs) to provide integration with a
 ??? Note
     Additional supported models and model serving platforms are available with LiteLLM. Refer to their [documentation](https://docs.litellm.ai/docs/providers) for model names.
 
-### Allowed Arguments for the Model Object.
+### Allowed Arguments for the Model Object
 
 | Argument   | Description |
 |------------|-------------|
@@ -121,7 +121,6 @@ with entry {
 ```
 
 A more complex example using object schema for context and structured output generation is demonstrated in the [game level generation](../examples/mtp_examples/rpg_game.md) example.
-
 
 ## Context-Aware byLLM Methods
 
@@ -262,7 +261,6 @@ obj Person {
 }
 ```
 
-
 ### When to Use Each Approach
 
 - **Docstrings**: Use for function-level context and behavior description
@@ -276,7 +274,6 @@ In this example:
 <!-- - `greet("Alice")` executes the normal function and returns `"Hello Alice"`
 - `greet("Alice") by llm()` overrides the function with LLM behavior
 - `format_data(user_data) by llm()` transforms data formatting into human-readable presentation -->
-
 
 ## Tool-Calling Agents with ReAct
 
@@ -308,7 +305,6 @@ with entry {
 ```
 
 A comprehensive tutorial on [building an agentic application is available here.](../examples/mtp_examples/fantasy_trading_game.md)
-
 
 ## Streaming Outputs
 

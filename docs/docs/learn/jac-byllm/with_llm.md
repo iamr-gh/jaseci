@@ -11,16 +11,13 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/byllm.svg)](https://pypi.org/project/byllm/) [![tests](https://github.com/jaseci-labs/jaseci/actions/workflows/test-jaseci.yml/badge.svg?branch=main)](https://github.com/jaseci-labs/jaseci/actions/workflows/test-jaseci.yml) [![Discord](https://img.shields.io/badge/Discord-Join%20Server-blue?logo=discord)](https://discord.gg/6j3QNdtcN6)
 
-
 byLLM is an innovative AI integration framework built for the Jaseci ecosystem, implementing the cutting-edge Meaning Typed Programming (MTP) paradigm. MTP revolutionizes AI integration by embedding prompt engineering directly into code semantics, making AI interactions more natural and maintainable. While primarily designed to complement the Jac programming language, byLLM also provides a powerful Python library interface.
-
 
 <!-- ## What is MTP?
 
 Meaning-Typed Programming (MTP) is a programming paradigm that automates LLM integration through language-level abstractions. MTP extracts semantic meaning from code to automatically generate prompts and handle response conversion, reducing the need for manual prompt engineering. These abstractions enable seamless LLM integration by automatically generating prompts from code semantics, making it easier to build agentic AI applications. Additional research details are available on arxiv.org.
 
 The MTP concept is implemented in Jac-lang through the **byLLM** plugin, which is available as a PyPI package. -->
-
 
 <div align="left" style="margin-top: 1em;">
     <a href="https://arxiv.org/abs/2405.08965" class="md-button" style="display: inline-block; margin-right: 10px;">MTP Research</a>
@@ -37,7 +34,6 @@ The MTP concept is implemented in Jac-lang through the **byLLM** plugin, which i
 - [Get started](https://www.jac-lang.org/learn/jac-byllm/quickstart/)
 - [Usage docs](https://www.jac-lang.org/learn/jac-byllm/usage/)
 - [Research Paper](https://arxiv.org/abs/2405.08965) -->
-
 
 Installation is simple via PyPI:
 
@@ -120,7 +116,7 @@ Consider a program that detects the personality type of a historical figure from
 
 Similarly, custom types can be used as output types which force the LLM to adhere to the specified type and produce a valid result.
 
-### Control! Control! Control!
+### Control! Control! Control
 
 Even if we are elimination prompt engineering entirely, we allow specific ways to enrich code semantics through **docstrings** and **semstrings**.
 
@@ -186,6 +182,7 @@ Docstrings naturally enhance the semantics of their associated code constructs, 
 - [Getting Started Guide](https://www.jac-lang.org/learn/jac-byllm/quickstart/)
 - [Jac Language Documentation](https://www.jac-lang.org/)
 - [GitHub Repository](https://github.com/jaseci-labs/jaseci)
+
 <hr />
 
 **Contributing**
@@ -224,5 +221,4 @@ byLLM integrates with various LLM providers (OpenAI, Anthropic, Google, etc.) th
 
 ### Cite our research
 
-
-> Jayanaka L. Dantanarayana, Yiping Kang, Kugesan Sivasothynathan, Christopher Clarke, Baichuan Li, Savini Kashmira, Krisztian Flautner, Lingjia Tang, and Jason Mars. 2025. MTP: A Meaning-Typed Language Abstraction for AI-Integrated Programming. Proc. ACM Program. Lang. 9, OOPSLA2, Article 314 (October 2025), 29 pages. https://doi.org/10.1145/3763092
+> Jayanaka L. Dantanarayana, Yiping Kang, Kugesan Sivasothynathan, Christopher Clarke, Baichuan Li, Savini Kashmira, Krisztian Flautner, Lingjia Tang, and Jason Mars. 2025. MTP: A Meaning-Typed Language Abstraction for AI-Integrated Programming. Proc. ACM Program. Lang. 9, OOPSLA2, Article 314 (October 2025), 29 pages. <https://doi.org/10.1145/3763092>
