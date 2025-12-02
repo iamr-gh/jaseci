@@ -6,6 +6,19 @@ exclude: |
         ^$
     )
 repos:
+  - repo: local
+    hooks:
+      - id: ban-em-dashes
+        name: Ban em-dashes (—)
+        language: pygrep
+        entry: \u2014
+        types: [markdown]
+
+      - id: ban-emojis
+        name: Ban emojis
+        language: pygrep
+        entry: '[\U0001F600-\U0001F64F\U0001F300-\U0001F5FF\U0001F680-\U0001F6FF\U0001F1E0-\U0001F1FF]'
+        types: [markdown]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
