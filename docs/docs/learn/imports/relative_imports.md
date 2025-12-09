@@ -21,25 +21,25 @@ Relative imports allow modules within a package to reference each other using `.
 
 Import from modules in the same directory.
 
->  [**relative_sibling/**](https://github.com/Jaseci-Labs/jaseci/tree/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_sibling)
+> [**relative_sibling/**](https://github.com/Jaseci-Labs/jaseci/tree/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_sibling)
 
 === "main.jac"
     ```jac title="relative_sibling/main.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_sibling/main.jac"
     ```
-    [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_sibling/main.jac)
+    [View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_sibling/main.jac)
 
 === "pkg/base.jac"
     ```jac title="relative_sibling/pkg/base.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_sibling/pkg/base.jac"
     ```
-    [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_sibling/pkg/base.jac)
+    [View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_sibling/pkg/base.jac)
 
 === "pkg/sibling.jac"
     ```jac title="relative_sibling/pkg/sibling.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_sibling/pkg/sibling.jac"
     ```
-    [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_sibling/pkg/sibling.jac)
+    [View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_sibling/pkg/sibling.jac)
 
 ```
 relative_sibling/
@@ -62,25 +62,25 @@ Relative import - BASE_VALUE: Base value
 
 Import from the parent directory.
 
->  [**relative_parent/**](https://github.com/Jaseci-Labs/jaseci/tree/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_parent)
+> [**relative_parent/**](https://github.com/Jaseci-Labs/jaseci/tree/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_parent)
 
 === "main.jac"
     ```jac title="relative_parent/main.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_parent/main.jac"
     ```
-    [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_parent/main.jac)
+    [View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_parent/main.jac)
 
 === "project/config.jac"
     ```jac title="relative_parent/project/config.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_parent/project/config.jac"
     ```
-    [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_parent/project/config.jac)
+    [View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_parent/project/config.jac)
 
 === "project/sub/deep.jac"
     ```jac title="relative_parent/project/sub/deep.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_parent/project/sub/deep.jac"
     ```
-    [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_parent/project/sub/deep.jac)
+    [View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/relative_parent/project/sub/deep.jac)
 
 ```
 relative_parent/
@@ -104,25 +104,25 @@ Parent relative - CONFIG_VALUE: Project config
 
 You can combine both import styles, but prefer absolute imports for clarity.
 
->  [**mixed_imports/**](https://github.com/Jaseci-Labs/jaseci/tree/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/mixed_imports)
+> [**mixed_imports/**](https://github.com/Jaseci-Labs/jaseci/tree/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/mixed_imports)
 
 === "main.jac"
     ```jac title="mixed_imports/main.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/mixed_imports/main.jac"
     ```
-    [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/mixed_imports/main.jac)
+    [View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/mixed_imports/main.jac)
 
 === "library/base.jac"
     ```jac title="mixed_imports/library/base.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/mixed_imports/library/base.jac"
     ```
-    [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/mixed_imports/library/base.jac)
+    [View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/mixed_imports/library/base.jac)
 
 === "library/extended.jac"
     ```jac title="mixed_imports/library/extended.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/mixed_imports/library/extended.jac"
     ```
-    [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/mixed_imports/library/extended.jac)
+    [View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/mixed_imports/library/extended.jac)
 
 ```
 mixed_imports/

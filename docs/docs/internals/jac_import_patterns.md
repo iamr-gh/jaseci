@@ -201,12 +201,12 @@ function MyComponent() {
 
 ## Status Summary
 
--  **Category 1 (Named Imports)**: Fully implemented and tested
--  **Category 2 (Default Imports)**: Fully implemented and tested
--  **Category 3 (Mixed Imports)**: Working for default+named and default+namespace
--  **Category 4 (Namespace Imports)**: Fully implemented and tested
--  **Relative Paths**: Full support with automatic conversion
--  **String Literal Imports**: Full support for hyphenated package names (react-dom, styled-components, etc.)
+- **Category 1 (Named Imports)**: Fully implemented and tested
+- **Category 2 (Default Imports)**: Fully implemented and tested
+- **Category 3 (Mixed Imports)**: Working for default+named and default+namespace
+- **Category 4 (Namespace Imports)**: Fully implemented and tested
+- **Relative Paths**: Full support with automatic conversion
+- **String Literal Imports**: Full support for hyphenated package names (react-dom, styled-components, etc.)
 - ️ **Named + Namespace Mix**: Generates but produces invalid JavaScript
 
 **Last Updated**: 2025-10-23

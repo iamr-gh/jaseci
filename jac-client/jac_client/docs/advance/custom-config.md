@@ -385,8 +385,8 @@ For `build`, `server`, and `resolve`, use object format:
 
 ### 4. Version Control
 
--  **Commit**: `config.json` (your customizations)
--  **Don't commit**: `.jac-client.configs/` (generated files)
+- **Commit**: `config.json` (your customizations)
+- **Don't commit**: `.jac-client.configs/` (generated files)
 
 The `.gitignore` automatically excludes generated configs.
 

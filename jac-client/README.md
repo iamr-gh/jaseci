@@ -6,7 +6,7 @@ Jac Client enables you to write React-like components, manage state, and build i
 
 ---
 
-##  Features
+## Features
 
 - **Single Language**: Write frontend and backend in Jac
 - **No HTTP Client**: Use `jacSpawn()` instead of fetch/axios
@@ -18,7 +18,7 @@ Jac Client enables you to write React-like components, manage state, and build i
 
 ---
 
-##  Quick Start
+## Quick Start
 
 ### Installation
 
@@ -38,7 +38,7 @@ Visit `http://localhost:8000/page/app` to see your app!
 
 ---
 
-##  Documentation
+## Documentation
 
 For detailed guides and tutorials, see the **[docs folder](jac_client/docs/)**:
 
@@ -50,7 +50,7 @@ For detailed guides and tutorials, see the **[docs folder](jac_client/docs/)**:
 
 ---
 
-##  Example
+## Example
 
 ### Simple Counter with React Hooks
 
@@ -132,7 +132,7 @@ cl {
 
 ---
 
-##  Requirements
+## Requirements
 
 - Python: 3.12+
 - Node.js: For npm and Vite
@@ -151,7 +151,7 @@ Jac Client is a plugin that:
 
 ---
 
-##  Learn More
+## Learn More
 
 - **Full Documentation**: See [docs/](jac_client/docs/) for comprehensive guides
 - **Examples**: Check `jac_client/examples/` for working examples
@@ -159,7 +159,7 @@ Jac Client is a plugin that:
 
 ---
 
-##  License
+## License
 
 MIT License - see [LICENSE](../LICENSE) file.
 
