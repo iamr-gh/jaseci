@@ -5,6 +5,7 @@ This example demonstrates styling a Jac application using JavaScript objects for
 ## Overview
 
 JavaScript styling uses JavaScript objects to define styles, which are then applied via the `style` prop. This approach is perfect for:
+
 - Dynamic styling based on state
 - Programmatic style generation
 - Component-scoped styles without CSS files
@@ -23,11 +24,13 @@ js-styling/
 ## Setup
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
-2. Run the application:
+1. Run the application:
+
 ```bash
 jac serve app.jac
 ```
@@ -144,6 +147,7 @@ JavaScript style objects use camelCase property names (React convention):
 ## When to Use
 
 Choose JavaScript Styling when:
+
 - You need dynamic styles based on state
 - You want programmatic style generation
 - You prefer keeping styles in JavaScript

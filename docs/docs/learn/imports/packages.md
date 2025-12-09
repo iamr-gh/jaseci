@@ -41,7 +41,7 @@ package_no_init/
 
 ??? example "Output"
     ```
-    add(3, 5): 8
+add(3, 5): 8
     multiply(4, 6): 24
     greet('World'): Hello, World!
     ```
@@ -60,7 +60,7 @@ Use `__init__.jac` when you want to create a simplified public API.
     ```
     [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/package_basic/main.jac)
 
-=== "mypackage/__init__.jac"
+=== "mypackage/**init**.jac"
     ```jac title="package_basic/mypackage/__init__.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/package_basic/mypackage/__init__.jac"
     ```
@@ -82,7 +82,7 @@ package_basic/
 
 ??? example "Output"
     ```
-    Package from-import - HELPER_VALUE: Helper value from package
+Package from-import - HELPER_VALUE: Helper value from package
     Package from-import - helper_func(): Helper function result
     ```
 
@@ -100,7 +100,7 @@ Access deeply nested packages using dot notation.
     ```
     [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/nested_packages/main.jac)
 
-=== "app/__init__.jac"
+=== "app/**init**.jac"
     ```jac title="nested_packages/app/__init__.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/nested_packages/app/__init__.jac"
     ```
@@ -140,7 +140,7 @@ nested_packages/
 
 ??? example "Output"
     ```
-    Nested deep - APP_NAME: MyApp
+Nested deep - APP_NAME: MyApp
     Nested deep - get_version(): 1.0.0
     Nested deep - create_user('Alice'): User(Alice) from MyApp
     ```
@@ -159,7 +159,7 @@ While optional, `__init__.jac` can be used to create a clean public API by re-ex
     ```
     [ View on GitHub](https://github.com/Jaseci-Labs/jaseci/blob/main/jac/jaclang/compiler/tests/fixtures/imports_fixture/init_reexport/main.jac)
 
-=== "mathlib/__init__.jac"
+=== "mathlib/**init**.jac"
     ```jac title="init_reexport/mathlib/__init__.jac"
     --8<-- "jac/jaclang/compiler/tests/fixtures/imports_fixture/init_reexport/mathlib/__init__.jac"
     ```
@@ -195,7 +195,7 @@ init_reexport/
 
 ??? example "Output"
     ```
-    Init reexport - add(5, 3): 8
+Init reexport - add(5, 3): 8
     Init reexport - subtract(10, 4): 6
     Init reexport - multiply(6, 7): 42
     Init reexport - divide(20, 4): 5.0
@@ -252,7 +252,7 @@ sibling_subpackage/
 
 ??? example "Output"
     ```
-    Sibling subpkg - A_VALUE: A module value
+Sibling subpkg - A_VALUE: A module value
     Sibling subpkg - a_func(): A function
     Sibling subpkg - B_VALUE: B uses A module value
     Sibling subpkg - b_func(): B calls: A function

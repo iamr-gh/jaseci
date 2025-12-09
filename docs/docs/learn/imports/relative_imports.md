@@ -51,7 +51,7 @@ relative_sibling/
 
 ??? example "Output"
     ```
-    Relative import - BASE_VALUE: Base value
+Relative import - BASE_VALUE: Base value
     Relative import - SIBLING_VALUE: Sibling uses Base value
     Relative import - sibling_func(): Sibling calls: Base function
     ```
@@ -93,7 +93,7 @@ relative_parent/
 
 ??? example "Output"
     ```
-    Parent relative - CONFIG_VALUE: Project config
+Parent relative - CONFIG_VALUE: Project config
     Parent relative - DEEP_VALUE: Deep module using config: Project config
     Parent relative - deep_func(): Deep function, DEBUG=True
     ```
@@ -134,7 +134,7 @@ mixed_imports/
 
 ??? example "Output"
     ```
-    Mixed - BASE_ID (from import): 1000
+Mixed - BASE_ID (from import): 1000
     Mixed - EXTENDED_ID: 1001
     Mixed - get_extended_id(): Base: 1000, Extended: 1001
     Mixed - lib_base.BASE_ID (alias): 1000

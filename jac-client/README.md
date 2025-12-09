@@ -143,6 +143,7 @@ cl {
 ## ️ How It Works
 
 Jac Client is a plugin that:
+
 1. Compiles your `.jac` client code to JavaScript
 2. Bundles dependencies with Vite for optimal performance
 3. Provides a runtime for reactive state and components

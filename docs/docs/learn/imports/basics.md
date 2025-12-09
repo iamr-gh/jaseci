@@ -48,7 +48,7 @@ absolute_import/
 
 ??? example "Output"
     ```
-    Absolute import - VALUE_A: Hello from module_a
+Absolute import - VALUE_A: Hello from module_a
     Absolute import - greet(): Greet from module_a
     ```
 
@@ -83,7 +83,7 @@ from_import/
 
 ??? example "Output"
     ```
-    From-import - VALUE_B: Hello from module_b
+From-import - VALUE_B: Hello from module_b
     From-import - calculate(5): 10
     From-import - MyClass: MyClass instance
     ```
@@ -119,7 +119,7 @@ include_statement/
 
 ??? example "Output"
     ```
-    Star import - PUBLIC_VAR: I am public
+Star import - PUBLIC_VAR: I am public
     Star import - public_func(): Public function
     ```
 
@@ -157,7 +157,7 @@ aliased_import/
 
 ??? example "Output"
     ```
-    Import as - md.LONG_MODULE_VALUE: Value from long named module
+Import as - md.LONG_MODULE_VALUE: Value from long named module
     From import as - lfn(): Result from long function
     ```
 
