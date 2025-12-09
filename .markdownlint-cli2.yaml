@@ -25,7 +25,7 @@ config:
   # code blocks should have a language specified
   MD040:  false
     # style: fenced
-  
+
   # no alt text for images
   MD045:  false
 
